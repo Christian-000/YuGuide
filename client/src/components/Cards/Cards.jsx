@@ -14,7 +14,7 @@ export default function Cards() {
             <Card
               key={c.id}
               name={c.name}
-              image={c.card_images[0].image_url_small}
+              image={c.card_images[0].image_url}
             />
           </Link>
         );

@@ -11,7 +11,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/home/*" element={<Home />} />
       <Route path="/home/createDeck" element={<CreateDeck />} />
-      <Route path="/cardDetail/*" element={<CardDetail />} />
+      <Route path="/cardDetail/:id" element={<CardDetail />} />
       <Route path="*" element={<h1> 404 NOT FOUND</h1>}></Route>
     </Routes>
   );

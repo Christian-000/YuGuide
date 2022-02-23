@@ -1,4 +1,4 @@
-import { GET_ALL_CARDS, GET_CARDS_BY_NAME } from "../actions";
+import { GET_ALL_CARDS, GET_CARDS_BY_NAME, GET_CARD_BY_ID } from "../actions";
 import * as ctrl from "../controllers";
 const initalState = {
     allCards: [],
@@ -21,6 +21,13 @@ export default function rootReducer(state = initalState, action){
             return {
                 ...state,
                 cards: myCards.filter(card => card.name.normalizing().includes(action.payload.toLowerCase()))
+            }
+
+        case GET_CARD_BY_ID:
+            const myCard = state.cards;
+            return {
+                ...state,
+                cards: myCard.filter(c => c.id == action.payload)
             }
         default:
             return state;
