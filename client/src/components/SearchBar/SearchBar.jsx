@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getCardByName } from "../../actions";
+import { HiOutlineSearch } from 'react-icons/hi';
 
 export default function SearchBar() {
   const [name, setName] = useState("");
@@ -19,15 +20,15 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="searchBar">
+    <div className="cont">
       <input
         type="text"
         placeholder="Search..."
         onChange={(e) => handleInput(e)}
       />
       {/* agregar iconos con material UI */}
-      <button type="submit" onClick={(e) => handleSubmit(e)}>
-        submit
+      <button className="search" type="submit" onClick={(e) => handleSubmit(e)}>
+        <HiOutlineSearch/>
       </button>
     </div>
   );

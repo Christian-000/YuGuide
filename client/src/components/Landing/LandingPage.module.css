@@ -1,0 +1,52 @@
+body{
+    /* background-color: #483a2e; */
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dd6hhft-d09c0a51-dc22-43e0-b4c4-9d426fb7c14a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZGMxM2I3LWEyZTctNGI0NS04M2VjLTMxMWU3MmU4MjkwMFwvZGQ2aGhmdC1kMDljMGE1MS1kYzIyLTQzZTAtYjRjNC05ZDQyNmZiN2MxNGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rFUrNSDar1CwY76UDGRqCp1oBOP2Mi5j3lUXggjHz2c");
+    display: block;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 2em;
+  }
+  
+  .container{
+    width: 328px;
+    height: 480px;
+    -webkit-perspective: 1500;
+    padding-left: 40%;
+  }
+  
+  .container:hover .card{
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  .card, .front, .back{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .card{
+    position: relative;
+    -webkit-transition: transform 1.5s;
+    -webkit-transform-style: preserve-3d;
+    background-image: url('https://vignette.wikia.nocookie.net/yugioh/images/9/95/SlifertheSkyDragon-GBI-AE-Back.png/revision/latest/scale-to-width-down/328?cb=2010072608370');
+  }
+  
+  .front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .front{
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .back{
+    -webkit-transform: rotateY(180deg);
+  }
+  .logo {
+      width: 100%;
+      height: 70%;
+  }
