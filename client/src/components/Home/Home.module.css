@@ -1,0 +1,20 @@
+.coffee{
+    display: flex;
+    font-size: 50px;
+    background: none;
+    color: #c5c743;
+    border: none;
+}
+
+.coffee:hover{
+    cursor: pointer;
+    color: #8f9031;
+}
+
+.coffee:hover::after{
+    content: "buy me a coffee :)";
+}
+
+a{
+    text-decoration: none;
+}

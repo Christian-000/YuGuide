@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getCardByName } from "../../actions";
-import { HiOutlineSearch } from 'react-icons/hi';
+import "./SearchBar.module.css";
 
 export default function SearchBar() {
   const [name, setName] = useState("");
@@ -17,19 +17,25 @@ export default function SearchBar() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(getCardByName(name));
+    console.log(e.keyCode)
+  }
+
+  function handlePress(e) {
+    if (e.keyCode == 13 ) {
+      
+      e.preventDefault();
+      dispatch(getCardByName(name));
+    }
   }
 
   return (
-    <div className="cont">
+    <div className="cont" tabIndex={0} onKeyDown={(e) => handlePress(e)}>
       <input
         type="text"
         placeholder="Search..."
         onChange={(e) => handleInput(e)}
       />
-      {/* agregar iconos con material UI */}
-      <button className="search" type="submit" onClick={(e) => handleSubmit(e)}>
-        <HiOutlineSearch/>
-      </button>
+      <div  className="search" onClick={(e) => handleSubmit(e)}></div>
     </div>
   );
 }

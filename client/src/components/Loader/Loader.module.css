@@ -1,0 +1,15 @@
+.loader-title {
+  font-size: 70px;
+  color: #ffc107;
+  font-family: Courier New;
+  text-shadow: 0px 0px 0 rgb(238, 176, 0), 1px 1px 0 rgb(221, 159, 0),
+    2px 2px 0 rgb(204, 142, 0), 3px 3px 0 rgb(187, 125, 0),
+    4px 4px 0 rgb(170, 108, 0), 5px 5px 0 rgb(153, 91, 0),
+    6px 6px 0 rgb(136, 74, 0), 7px 7px 6px rgba(0, 0, 0, 0.6),
+    7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.loader-img{
+    width: 500px;
+    height: 500px;
+}
