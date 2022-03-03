@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getCardByName } from "../../actions";
-import "./SearchBar.module.css";
+import style from "./SearchBar.module.css";
 
 export default function SearchBar() {
   const [name, setName] = useState("");
@@ -21,7 +21,7 @@ export default function SearchBar() {
   }
 
   function handlePress(e) {
-    if (e.keyCode == 13 ) {
+    if (e.keyCode === 13 ) {
       
       e.preventDefault();
       dispatch(getCardByName(name));
@@ -29,13 +29,13 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="cont" tabIndex={0} onKeyDown={(e) => handlePress(e)}>
+    <div className={style.cont} tabIndex={0} onKeyDown={(e) => handlePress(e)}>
       <input
         type="text"
         placeholder="Search..."
         onChange={(e) => handleInput(e)}
       />
-      <div  className="search" onClick={(e) => handleSubmit(e)}></div>
+      <div  className={style.search} onClick={(e) => handleSubmit(e)}></div>
     </div>
   );
 }

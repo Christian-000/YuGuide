@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import SliderComponent from "../Slider/Slider";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCards } from "../../actions";
 import Cards from "../Cards/Cards";
-import "./Home.module.css";
+import style from "./Home.module.css";
 import Loader from "../Loader/Loader";
 import { BiCoffeeTogo } from "react-icons/bi";
 
@@ -31,7 +31,7 @@ export default function Home() {
         <br />
         {cardsArray.length === 0 ? null : <Cards />}
         <br />
-        <button onClick={() => window.open("https://buymeacoffee.com/christianp1")} className="coffee"><BiCoffeeTogo/></button>
+        <button onClick={() => window.open("https://buymeacoffee.com/christianp1")} className={style.coffee}><BiCoffeeTogo/></button>
       </div>
     );
   }

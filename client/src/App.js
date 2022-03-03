@@ -6,10 +6,11 @@ import CreateDeck from "./components/CreateDeck/CreateDeck";
 import CardDetail from "./components/CardDetail/CardDetail";
 
 function App() {
+  const landing = new LandingPage();
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={landing} />
       <Route path="/home/*" element={<Home />} />
       <Route path="/home/createDeck" element={<CreateDeck />} />
       <Route path="/cardDetail/:id" element={<CardDetail />} />

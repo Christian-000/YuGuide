@@ -1,4 +1,4 @@
-.loader-title {
+.loader_title {
   font-size: 70px;
   color: #ffc107;
   font-family: Courier New;
@@ -9,7 +9,12 @@
     7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
-.loader-img{
+.loader_img{
     width: 500px;
     height: 500px;
+}
+
+.container{
+  padding-left: 40%;
+
 }
