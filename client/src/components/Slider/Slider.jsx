@@ -47,7 +47,7 @@ export default function SliderComponent() {
           alt=""
         />
       </div>
-      <div onClick={() => window.open("https://www.konami.com/games")}>
+      <div className={style.about} onClick={() => window.open("https://github.com/Christian-000/YuGuide")}>
         <img width="100%" height={500} src={about} alt="about-me" />
       </div>
     </Slider>
