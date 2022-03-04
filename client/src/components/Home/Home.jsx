@@ -11,7 +11,7 @@ import { BiCoffeeTogo } from "react-icons/bi";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-
+  const isActivate = useSelector(state => state.find)
   const dispatch = useDispatch();
   const cardsArray = useSelector((state) => state.cards);
   useEffect(() => {
@@ -28,8 +28,10 @@ export default function Home() {
         <SliderComponent />
         <br />
         <SearchBar />
-        <br />
+        <br className={style.brHome} />
+        {cardsArray.length === 0 && isActivate? <h3 className={style.noResults}>No results found</h3> : null}
         {cardsArray.length === 0 ? null : <Cards />}
+
         <br />
         <button onClick={() => window.open("https://buymeacoffee.com/christianp1")} className={style.coffee}><BiCoffeeTogo/></button>
       </div>

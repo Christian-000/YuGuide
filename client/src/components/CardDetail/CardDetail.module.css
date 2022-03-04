@@ -1,5 +1,5 @@
 .detailParagraph{
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 .cardName{
@@ -21,9 +21,7 @@
     background-color: #5c5f58;
 }
 
-.cardImg {
-    margin-left: 73vh;
-}
+
 
 
 .seePrice {

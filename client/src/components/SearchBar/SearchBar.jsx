@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getCardByName } from "../../actions";
+import { activate, getCardByName } from "../../actions";
 import style from "./SearchBar.module.css";
 
 export default function SearchBar() {
@@ -17,14 +17,14 @@ export default function SearchBar() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(getCardByName(name));
-    console.log(e.keyCode)
+    dispatch(activate());
   }
 
   function handlePress(e) {
-    if (e.keyCode === 13 ) {
-      
+    if (e.keyCode === 13) {
       e.preventDefault();
       dispatch(getCardByName(name));
+      dispatch(activate());
     }
   }
 
@@ -34,8 +34,9 @@ export default function SearchBar() {
         type="text"
         placeholder="Search..."
         onChange={(e) => handleInput(e)}
+        autoFocus="true"
       />
-      <div  className={style.search} onClick={(e) => handleSubmit(e)}></div>
+      <div className={style.search} onClick={(e) => handleSubmit(e)}></div>
     </div>
   );
 }

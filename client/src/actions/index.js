@@ -3,6 +3,7 @@ import axios from "axios";
 export const GET_ALL_CARDS = "GET_ALL_CARDS";
 export const GET_CARDS_BY_NAME = "GET_CARDS_BY_NAME";
 export const GET_CARD_BY_ID = "GET_CARD_BY_ID";
+export const ACTIVATE = "ACTIVATE";
 
 export function getAllCards(){
     return async function(dispatch){
@@ -31,5 +32,12 @@ export function getCardById(id){
     return {
         type:GET_CARD_BY_ID,
         payload: id
+    }
+}
+
+export function activate(){
+    return {
+        type: ACTIVATE,
+        payload: true
     }
 }

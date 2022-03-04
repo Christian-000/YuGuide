@@ -1,20 +1,39 @@
-.coffee{
-    display: flex;
-    font-size: 50px;
-    background: none;
-    color: #c5c743;
-    border: none;
+.coffee {
+  display: flex;
+  font-size: 50px;
+  background: none;
+  color: #c5c743;
+  border: none;
 }
 
-.coffee:hover{
-    cursor: pointer;
-    color: #8f9031;
+.coffee:hover {
+  cursor: pointer;
+  color: #8f9031;
 }
 
-.coffee:hover::after{
-    content: "buy me a coffee :)";
+.coffee:hover::after {
+  content: "buy me a coffee :)";
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+
+.brHome {
+  padding: 150px;
+}
+
+.noResults {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1em;
+  color: #cc1653;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 46px;
+  text-shadow: 0px 0px 0 rgb(139, -43, 18), 1px 1px 0 rgb(115, -67, -6),
+    2px 2px 0 rgb(90, -92, -31), 3px 3px 0 rgb(65, -117, -56),
+    4px 4px 0 rgb(40, -142, -81), 5px 5px 0 rgb(16, -166, -105),
+    6px 6px 0 rgb(-9, -191, -130), 7px 7px 0 rgb(-34, -216, -155),
+    8px 8px 7px rgba(0, 0, 0, 0.7), 8px 8px 1px rgba(0, 0, 0, 0.5),
+    0px 0px 7px rgba(0, 0, 0, 0.2);
 }

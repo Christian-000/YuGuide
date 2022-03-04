@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 import WOW from "../../assets/WOW.mp3"
+import style from "./Slider.module.css"
+import about from "../../assets/about.jpg"
 
 export default function SliderComponent() {
   var settings = {
@@ -13,7 +15,7 @@ export default function SliderComponent() {
   let audio = new Audio(WOW)
   return (
     <Slider {...settings}>
-      <div onClick={() => window.open("https://www.konami.com/games")}>
+      <div onClick={() => window.open("https://www.konami.com/games")} className={style.firstDiv}>
         <img
           height={500}
           width="100%"
@@ -44,6 +46,9 @@ export default function SliderComponent() {
           src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2019/11/Dark-Magician-Girl-Fifth-Feature.jpg?q=50&fit=contain&w=943&h=499&dpr=1.5"
           alt=""
         />
+      </div>
+      <div onClick={() => window.open("https://www.konami.com/games")}>
+        <img width="100%" height={500} src={about} alt="about-me" />
       </div>
     </Slider>
   );

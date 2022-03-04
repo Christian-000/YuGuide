@@ -1,11 +1,11 @@
-import { GET_ALL_CARDS, GET_CARDS_BY_NAME, GET_CARD_BY_ID } from "../actions";
+import { ACTIVATE, GET_ALL_CARDS, GET_CARDS_BY_NAME, GET_CARD_BY_ID } from "../actions";
 import * as ctrl from "../controllers";
 const initalState = {
     allCards: [],
-    cards: []
+    cards: [],
+    find: false
 };
 
-//norma(); //comes from controllers
 
 export default function rootReducer(state = initalState, action){
     switch (action.type) {
@@ -28,6 +28,12 @@ export default function rootReducer(state = initalState, action){
             return {
                 ...state,
                 cards: myCard.filter(c => c.id == action.payload)
+            }
+
+        case ACTIVATE:
+            return {
+                ...state,
+                find:action.payload
             }
         default:
             return state;

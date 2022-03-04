@@ -26,26 +26,33 @@ export default function CardDetail() {
   return (
     <div className={style.detailContainer}>
       <div className={style.name_btn}>
-        <Link to={"/home"}><button className={style.home_btn}>
-          <AiOutlineHome />
-        </button></Link>
+        <Link to={"/home"}>
+          <button className={style.home_btn}>
+            <AiOutlineHome />
+          </button>
+        </Link>
         <h3 className={style.cardName}>{myCard[0].name}</h3>
+        <img
+          src={myCard[0].card_images[0].image_url}
+          alt="img not found"
+        />
       </div>
-      <img
-        className={style.cardImg}
-        src={myCard[0].card_images[0].image_url}
-        alt="img not found"
-      />
       {myCard[0].level ? (
-        <p className={`${style.detailParagraph} ${style.basic}`}>Level: {myCard[0].level}</p>
+        <p className={`${style.detailParagraph} ${style.basic}`}>
+          Level: {myCard[0].level}
+        </p>
       ) : null}
-      <p className={`${style.detailParagraph} ${style.basic}`}>Type: {myCard[0].type}</p>
+      <p className={`${style.detailParagraph} ${style.basic}`}>
+        Type: {myCard[0].type}
+      </p>
       {myCard[0].archetype ? (
         <p className={`${style.detailParagraph} ${style.basic}`}>
           Archetype: {myCard[0].archetype}
         </p>
       ) : null}
-      <p className={`${style.detailParagraph} ${style.basic}`}>Description: {myCard[0].desc}</p>
+      <p className={`${style.detailParagraph} ${style.basic}`}>
+        Description: {myCard[0].desc}
+      </p>
       <button className={style.seePrice} onClick={(e) => handlePrice(e)}>
         {price ? "Hide Price" : "See Price"}
       </button>
