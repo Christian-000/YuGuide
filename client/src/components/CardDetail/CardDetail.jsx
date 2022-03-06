@@ -60,7 +60,7 @@ export default function CardDetail() {
         ? keys.map((el) => (
             <p className={`${style.detailParagraph} ${style.price}`}>
               <BsCaretRightFill />
-              {`${el}: ${myCard[0].card_prices[0][el]}`}
+              {`${el}: $${myCard[0].card_prices[0][el]}`}
             </p>
           ))
         : null}

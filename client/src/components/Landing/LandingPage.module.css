@@ -7,11 +7,17 @@ body{
     padding: 2em;
   }
   
+
+
+  .father{
+    display: flex;
+    justify-content: center;
+  }
+
   .container{
     width: 328px;
     height: 480px;
     -webkit-perspective: 1500;
-    padding-left: 40%;
   }
   
   .container:hover .card{
